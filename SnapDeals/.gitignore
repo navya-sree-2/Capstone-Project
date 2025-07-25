@@ -1,0 +1,48 @@
+# Compiled class files
+*.class
+
+# Maven target directory
+/target/
+
+# Eclipse specific files
+*.classpath
+*.project
+*.settings/
+
+# IntelliJ specific files (if used)
+*.iml
+.idea/
+
+# Logs
+*.log
+
+
+/surefire-reports/
+
+/*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+
+# /src/test/resources/config.properties
+
+
+# Properties backup (optional)
+*.properties
+
+# Ignore generated files if any
+generated-sources/
+
+# Coverage reports
+jacoco.exec
+/coverage/
+
+# Optional: Ignore environment-specific configs
+.env
