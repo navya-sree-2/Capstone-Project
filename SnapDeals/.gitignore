@@ -31,11 +31,11 @@ Thumbs.db
 *.tmp
 *.bak
 
-# /src/test/resources/config.properties
+config.properties
 
 
 # Properties backup (optional)
-*.properties
+# *.properties~
 
 # Ignore generated files if any
 generated-sources/
