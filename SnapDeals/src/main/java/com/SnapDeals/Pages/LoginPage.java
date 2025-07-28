@@ -12,9 +12,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class LoginPage {
     WebDriver driver;
     WebDriverWait wait;
+    
+    
+    By snapdealLogo = By.xpath("//a[@class='notIeLogoHeader']"); 
 
     By accountTab = By.cssSelector("div.myAccountTab");
     By loginLink = By.xpath("//span[@class='accountBtn btn rippleWhite']/a[text()='login']");
+    
+    By loginContainer = By.xpath("//div[@class='iframeSignin']");
 
     By usernameInput = By.xpath("//input[@id='userName']");
     By continueBtn = By.xpath("//button[@id='checkUser']");
@@ -28,7 +33,12 @@ public class LoginPage {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
-
+    
+    
+    public WebElement findWebPage() {
+        return driver.findElement(snapdealLogo);
+    }
+    
     public void hoverAndClickLogin() {
         WebElement account = wait.until(ExpectedConditions.visibilityOfElementLocated(accountTab));
         Actions actions = new Actions(driver);
@@ -38,7 +48,7 @@ public class LoginPage {
         login.click();
         
         try {
-            wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(0)); // OR use driver.switchTo().frame("frameName");
+            wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(0));
         } catch (Exception e) {
             System.out.println("No iframe detected or switching failed.");
         }
@@ -66,6 +76,16 @@ public class LoginPage {
 	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	    WebElement userNameElement = wait.until(ExpectedConditions.visibilityOfElementLocated(isLogged));
 	    return userNameElement.isDisplayed();
+	}
+
+
+	public WebElement findLoginPage() {
+		return wait.until(ExpectedConditions.visibilityOfElementLocated(loginContainer));
+	}
+
+
+	public WebElement findField() {
+		return driver.findElement(usernameInput);
 	}
 	
 }

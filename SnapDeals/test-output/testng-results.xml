@@ -1,25 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-26T00:48:59 IST" name="Suite" finished-at="2025-07-26T00:49:49 IST" duration-ms="49522">
+  <suite started-at="2025-07-26T22:14:25 IST" name="Default suite" finished-at="2025-07-26T22:16:27 IST" duration-ms="122663">
     <groups>
     </groups>
-    <test started-at="2025-07-26T00:48:59 IST" name="Test" finished-at="2025-07-26T00:49:49 IST" duration-ms="49522">
+    <test started-at="2025-07-26T22:14:25 IST" name="Default test" finished-at="2025-07-26T22:16:27 IST" duration-ms="122663">
       <class name="com.SnapDeals.Tests.LoginTest">
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.SnapDeals.Tests.LoginTest@5e5d171f]" started-at="2025-07-26T00:48:36 IST" name="launchBrowser" finished-at="2025-07-26T00:48:59 IST" duration-ms="23488" status="PASS">
+        <test-method is-config="true" signature="setupSuite()[pri:0, instance:com.SnapDeals.Tests.LoginTest@23348b5d]" started-at="2025-07-26T22:14:25 IST" name="setupSuite" finished-at="2025-07-26T22:14:25 IST" duration-ms="169" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupSuite -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.SnapDeals.Tests.LoginTest@23348b5d]" started-at="2025-07-26T22:14:25 IST" name="launchBrowser" finished-at="2025-07-26T22:14:45 IST" duration-ms="20126" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method signature="loginToSnapdeal()[pri:0, instance:com.SnapDeals.Tests.LoginTest@5e5d171f]" started-at="2025-07-26T00:48:59 IST" name="loginToSnapdeal" finished-at="2025-07-26T00:49:49 IST" duration-ms="49471" status="PASS">
+        <test-method signature="websiteCheck()[pri:1, instance:com.SnapDeals.Tests.LoginTest@23348b5d]" started-at="2025-07-26T22:14:45 IST" name="websiteCheck" finished-at="2025-07-26T22:14:45 IST" duration-ms="65" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginToSnapdeal -->
-        <test-method is-config="true" signature="tearDownSuite()[pri:0, instance:com.SnapDeals.Tests.LoginTest@5e5d171f]" started-at="2025-07-26T00:49:49 IST" name="tearDownSuite" finished-at="2025-07-26T00:49:49 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- websiteCheck -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.SnapDeals.Tests.LoginTest@23348b5d]" started-at="2025-07-26T22:14:45 IST" name="tearDown" finished-at="2025-07-26T22:14:45 IST" duration-ms="218" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.SnapDeals.Tests.LoginTest@23348b5d]" started-at="2025-07-26T22:14:45 IST" name="launchBrowser" finished-at="2025-07-26T22:15:10 IST" duration-ms="24780" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="loginPageCheck()[pri:2, instance:com.SnapDeals.Tests.LoginTest@23348b5d]" started-at="2025-07-26T22:15:10 IST" name="loginPageCheck" finished-at="2025-07-26T22:15:15 IST" duration-ms="4696" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginPageCheck -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.SnapDeals.Tests.LoginTest@23348b5d]" started-at="2025-07-26T22:15:15 IST" name="tearDown" finished-at="2025-07-26T22:15:15 IST" duration-ms="205" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.SnapDeals.Tests.LoginTest@23348b5d]" started-at="2025-07-26T22:15:15 IST" name="launchBrowser" finished-at="2025-07-26T22:15:30 IST" duration-ms="14809" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="FieldCheck()[pri:3, instance:com.SnapDeals.Tests.LoginTest@23348b5d]" started-at="2025-07-26T22:15:30 IST" name="FieldCheck" finished-at="2025-07-26T22:15:35 IST" duration-ms="5869" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FieldCheck -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.SnapDeals.Tests.LoginTest@23348b5d]" started-at="2025-07-26T22:15:36 IST" name="tearDown" finished-at="2025-07-26T22:15:36 IST" duration-ms="206" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.SnapDeals.Tests.LoginTest@23348b5d]" started-at="2025-07-26T22:15:36 IST" name="launchBrowser" finished-at="2025-07-26T22:15:44 IST" duration-ms="8122" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="LoginCheck()[pri:4, instance:com.SnapDeals.Tests.LoginTest@23348b5d]" started-at="2025-07-26T22:15:44 IST" name="LoginCheck" finished-at="2025-07-26T22:16:27 IST" duration-ms="43284" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginCheck -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.SnapDeals.Tests.LoginTest@23348b5d]" started-at="2025-07-26T22:16:27 IST" name="tearDown" finished-at="2025-07-26T22:16:27 IST" duration-ms="242" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDownSuite()[pri:0, instance:com.SnapDeals.Tests.LoginTest@23348b5d]" started-at="2025-07-26T22:16:27 IST" name="tearDownSuite" finished-at="2025-07-26T22:16:28 IST" duration-ms="340" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownSuite -->
       </class> <!-- com.SnapDeals.Tests.LoginTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
