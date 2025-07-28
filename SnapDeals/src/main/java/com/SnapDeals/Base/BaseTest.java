@@ -28,18 +28,19 @@ public class BaseTest {
         extent = ExtentManager.setupExtent();
     }
 
-    @BeforeMethod
-    public void launchBrowser() throws IOException {
+    @Parameters("browser")
+    @BeforeClass
+    public void launchBrowser(String browser) throws IOException {
         prop = ConfigReader.loadProperties();
-        if(prop.getProperty("browser").equalsIgnoreCase("chrome")) {
+        if(browser.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
         }
-        else if(prop.getProperty("browser").equalsIgnoreCase("edge")) {
+        else if(browser.equalsIgnoreCase("edge")) {
         	WebDriverManager.edgedriver().setup();
         	driver = new EdgeDriver();
         }
-        else if(prop.getProperty("browser").equalsIgnoreCase("firefox")) {
+        else if(browser.equalsIgnoreCase("firefox")) {
         	WebDriverManager.firefoxdriver().setup();
         	driver = new FirefoxDriver();
         }
@@ -47,7 +48,7 @@ public class BaseTest {
         driver.get(prop.getProperty("url"));
     }
 
-    @AfterMethod
+    @AfterClass
     public void tearDown() {
         driver.quit();
     }

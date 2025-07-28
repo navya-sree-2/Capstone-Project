@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -36,6 +37,8 @@ public class MenSelection {
     By prod = By.cssSelector("p.product-title");
     
     By cart = By.xpath("//div[@id='add-cart-button-id']");
+    
+    By proceedToCheckOut = By.xpath("//a[@id='rzp-quickcart-button']");
 
 
     public MenSelection(WebDriver driver) {
@@ -43,6 +46,10 @@ public class MenSelection {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         js = (JavascriptExecutor) driver;
         actions = new Actions(driver);
+    }
+    
+    public WebElement mensFashionEle() {
+    	return driver.findElement(mensFashion);
     }
 
     public void hoverAndClickSunGlasses() {
@@ -55,23 +62,31 @@ public class MenSelection {
         
     }
     
-    public void applyFilters() throws InterruptedException {
+    public WebElement menOnly() {
+    	return driver.findElement(filterMenOnly);
+    }
+    
+    public void selectMenOnlyFilter() {
+        WebElement menOnlyCheckbox = wait.until(ExpectedConditions.elementToBeClickable(filterMenOnly));
+        js.executeScript("arguments[0].click();", menOnlyCheckbox);
+        js.executeScript("window.scrollBy(0, 500);");
+    }
 
-    	WebElement menOnlyCheckbox = wait.until(ExpectedConditions.elementToBeClickable(filterMenOnly));
-    	js.executeScript("arguments[0].click();", menOnlyCheckbox);
-
-    	js.executeScript("window.scrollBy(0, 500);");
-    	Thread.sleep(1000);
-    	
-    	WebElement frameMat = wait.until(ExpectedConditions.elementToBeClickable(expandMaterial));
+    public void expandMaterialFilter() throws InterruptedException {
+        WebElement frameMat = wait.until(ExpectedConditions.elementToBeClickable(expandMaterial));
         js.executeScript("arguments[0].scrollIntoView(true);", frameMat);
-        Thread.sleep(800);
+        Thread.sleep(800);  // Optional: can use WebDriverWait instead
         js.executeScript("arguments[0].click();", frameMat);
+    }
+    
+    public WebElement metalMaterial() {
+    	return driver.findElement(metal);
+    }
 
+    public void selectMaterialMetal() {
         WebElement metalOpt = wait.until(ExpectedConditions.elementToBeClickable(metal));
         js.executeScript("arguments[0].scrollIntoView(true);", metalOpt);
         js.executeScript("arguments[0].click();", metalOpt);
-    	
     }
 
 	public void selectPriceRange(int mn, int mx) {
@@ -90,30 +105,58 @@ public class MenSelection {
 	}
 	
 	public void selectItem() {
-		// TODO Auto-generated method stub
-		
-        wait.until(ExpectedConditions.visibilityOfElementLocated(firstTile));
-        WebElement tile = driver.findElements(firstTile).get(0);
+	    try {
+	        // Wait and scroll to first tile
+	        wait.until(ExpectedConditions.visibilityOfElementLocated(firstTile));
+	        WebElement tile = driver.findElements(firstTile).get(0);
+	        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});", tile);
+	        Thread.sleep(500);
 
-        Actions act = new Actions(driver);
-        act.moveToElement(tile).perform();
+	        // Move to element after scroll
+	        new Actions(driver).moveToElement(tile).perform();
 
-        wait.until(ExpectedConditions.elementToBeClickable(firstProduct));
-        driver.findElements(firstProduct).get(0).click();
-        ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
-        driver.switchTo().window(tabs.get(1));
-        
-        WebElement el = driver.findElement(prod);
-        if(el.isDisplayed()) {
-        	System.out.println("Success");
-        }
-        else {
-        	System.out.println("Failure");
-        }
-        
-        
+	        // Wait and click using JS (more stable)
+	        wait.until(ExpectedConditions.elementToBeClickable(firstProduct));
+	        WebElement product = driver.findElements(firstProduct).get(0);
+	        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", product);
+
+	        // Wait for the new tab to open
+	        String originalWindow = driver.getWindowHandle();
+	        new WebDriverWait(driver, Duration.ofSeconds(10))
+	            .until(d -> driver.getWindowHandles().size() > 1);
+
+	        // Switch to the new tab
+	        for (String windowHandle : driver.getWindowHandles()) {
+	            if (!windowHandle.equals(originalWindow)) {
+	                driver.switchTo().window(windowHandle);
+	                break;
+	            }
+	        }
+
+	        // Wait for product element after tab switch
+	        wait.until(ExpectedConditions.visibilityOfElementLocated(prod));
+	        WebElement el = driver.findElement(prod); // RE-LOCATE after tab switch
+
+	        if (el.isDisplayed()) {
+	            System.out.println("Success");
+	        } else {
+	            System.out.println("Failure");
+	        }
+
+	    } catch (StaleElementReferenceException staleEx) {
+	        System.out.println("Caught StaleElementReferenceException, retrying...");
+	        selectItem(); // Retry once recursively
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	        System.out.println("Test failed due to: " + e.getMessage());
+	    }
+	}
+	
+	public WebElement addToCartEle() {
+		return driver.findElement(cart);
 	}
 
+	
 	public void addToCart() {
 		// TODO Auto-generated method stub
 		System.out.println(driver.getCurrentUrl());
@@ -123,5 +166,8 @@ public class MenSelection {
 		));
 		addToCart.click();
 	}
-
+	
+	public WebElement checkOut() {
+		return driver.findElement(proceedToCheckOut);
+	}
 }

@@ -1,13 +1,20 @@
 package com.SnapDeals.Tests;
 
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.SnapDeals.Base.BaseTest;
 import com.SnapDeals.Pages.LoginPage;
+import com.SnapDeals.Utilities.ExcelReader;
 import com.aventstack.extentreports.Status;
+
+import java.io.IOException;
+
 import org.testng.Assert;
 
 public class LoginTest extends BaseTest {
+	public String projectPath = System.getProperty("user.dir");
 
 	LoginPage loginPage;
 //    @Test
@@ -24,11 +31,15 @@ public class LoginTest extends BaseTest {
 //    		System.out.println("Unsuccessful");
 //    	}
 //    }
+	
+	@BeforeClass
+    public void setupPage() {
+        loginPage = new LoginPage(driver);
+        test = extent.createTest("Login Checks");
+    }
     
     @Test(priority = 1)
     public void websiteCheck() {
-        test = extent.createTest("Check: Snapdeal web is opened or not");
-        loginPage = new LoginPage(driver);
         if(loginPage.findWebPage().isDisplayed()) {
             test.log(Status.PASS, "Snapdeal Website Opened");
         }
@@ -39,8 +50,6 @@ public class LoginTest extends BaseTest {
     
     @Test(priority = 2)
     public void loginPageCheck() {
-        test = extent.createTest("Check: Login Page is displayed or not");
-        loginPage = new LoginPage(driver);
         loginPage.hoverAndClickLogin();
         System.out.println(driver.getTitle());
         if(loginPage.findLoginPage().isDisplayed()) {
@@ -53,10 +62,7 @@ public class LoginTest extends BaseTest {
     
     @Test(priority = 3)
     public void FieldCheck() {
-        test = extent.createTest("Check: Login Fields displayed or not");
-        loginPage = new LoginPage(driver);
-        loginPage.hoverAndClickLogin();
-        if(loginPage.findLoginPage().isDisplayed()) {
+        if(loginPage.findField().isDisplayed()) {
             test.log(Status.PASS, "Mobile num field displayed");
         }
         else {
@@ -64,12 +70,9 @@ public class LoginTest extends BaseTest {
         }
     }
     
-    @Test(priority = 4)
-    public void LoginCheck() throws InterruptedException {
-    	test = extent.createTest("Check: Login Fields displayed or not");
-        loginPage = new LoginPage(driver);
-        loginPage.hoverAndClickLogin();
-    	loginPage.enterUsername(prop.getProperty("phn"));
+    @Test(priority = 4, dataProvider="logindata")
+    public void LoginCheck(String phn) throws InterruptedException {
+    	loginPage.enterUsername(phn);
     	loginPage.clickContinue();
     	loginPage.enterOtp();
     	
@@ -82,5 +85,15 @@ public class LoginTest extends BaseTest {
     	
     }
     
+    
+//    @DataProvider(name="logindata")
+//    public String[] loginCreds() throws IOException {
+//        return ExcelReader.readColumn();
+//    }
+    @DataProvider(name = "logindata")
+    public Object[][] phoneDataProvider() throws Exception {
+        String filePath = "./data/login.xlsx";
+        return ExcelReader.readExcelData(filePath, 0);
+    }
     
 }

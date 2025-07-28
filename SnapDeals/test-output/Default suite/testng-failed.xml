@@ -3,15 +3,20 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.SnapDeals.Tests.LoginTest">
+      <class name="com.SnapDeals.Tests.MenSelectionTest">
         <methods>
+          <include name="menSelectionCheck"/>
           <include name="launchBrowser"/>
           <include name="tearDownSuite"/>
           <include name="setupSuite"/>
           <include name="tearDown"/>
-          <include name="loginPageCheck"/>
+          <include name="itemAddedToCartCheck"/>
+          <include name="metalMaterialCheck"/>
+          <include name="itemSelectionCheck"/>
+          <include name="setupPage"/>
+          <include name="menOnlyFilterCheck"/>
         </methods>
-      </class> <!-- com.SnapDeals.Tests.LoginTest -->
+      </class> <!-- com.SnapDeals.Tests.MenSelectionTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

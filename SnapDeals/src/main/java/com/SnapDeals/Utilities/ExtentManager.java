@@ -12,8 +12,13 @@ public class ExtentManager {
 		System.out.println(reportPath);
 		ExtentSparkReporter spark = new ExtentSparkReporter(reportPath);
 		extent = new ExtentReports();
-		spark.config().setDocumentTitle("Login Testing");
-		spark.config().setReportName("Selenium Result tests");
+		extent.attachReporter(spark);
+		extent.setSystemInfo("HostName", "MyHost");
+		extent.setSystemInfo("ProjectName", "SnapDeal");
+		extent.setSystemInfo("Tester", "Navya Sree");
+		extent.setSystemInfo("OS", "Win11");
+		extent.setSystemInfo("Browser", "Chrome");
+
 		extent.attachReporter(spark);
 		
 		return extent;
