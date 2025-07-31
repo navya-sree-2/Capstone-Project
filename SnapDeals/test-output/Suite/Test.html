@@ -55,11 +55,19 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
+<<<<<<< HEAD
 <td>Tests passed/Failed/Skipped:</td><td>10/0/0</td>
 </tr><tr>
 <td>Started on:</td><td>Mon Jul 28 21:23:55 IST 2025</td>
 </tr>
 <tr><td>Total time:</td><td>102 seconds (102538 ms)</td>
+=======
+<td>Tests passed/Failed/Skipped:</td><td>21/2/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Jul 31 22:03:26 IST 2025</td>
+</tr>
+<tr><td>Total time:</td><td>175 seconds (175179 ms)</td>
+>>>>>>> 59de8ca (Final Push)
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +75,147 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<<<<<<< HEAD
+=======
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.SnapDeals.Tests.RegisterTest.Register()'><b>Register</b><br>Test class: com.SnapDeals.Tests.RegisterTest</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: j_username_new (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.33.0&apos;, revision: &apos;2c6aaad03a&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.4&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.183, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\NAVYAS~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57499}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57499/devtoo..., se:cdpVersion: 138.0.7204.183, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a5a2903cf8c0bfc70e1e9d53b6549aeb
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.SnapDeals.Pages.RegisterPage.emailEle(RegisterPage.java:69)
+	at com.SnapDeals.Tests.RegisterTest.Register(RegisterTest.java:17)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1544562778", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1544562778'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: j_username_new (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.33.0&apos;, revision: &apos;2c6aaad03a&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.4&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.183, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\NAVYAS~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57499}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57499/devtoo..., se:cdpVersion: 138.0.7204.183, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a5a2903cf8c0bfc70e1e9d53b6549aeb
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.SnapDeals.Pages.RegisterPage.emailEle(RegisterPage.java:69)
+	at com.SnapDeals.Tests.RegisterTest.Register(RegisterTest.java:17)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>13</td>
+<td>com.SnapDeals.Tests.RegisterTest@1e178745</td></tr>
+<tr>
+<td title='com.SnapDeals.Tests.CartTest.incQuantity()'><b>incQuantity</b><br>Test class: com.SnapDeals.Tests.CartTest</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: chrome=138.0.7204.183)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.33.0&apos;, revision: &apos;2c6aaad03a&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.4&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f0769d2b835428bd88e49931104117e4, clickElement {id=f.8E6B7558D0F9CDB346604452614012D0.d.5787E99A6F9A3906C58FB3F81733A0A9.e.217}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.183, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\NAVYAS~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57948}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57948/devtoo..., se:cdpVersion: 138.0.7204.183, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (f0769d2b835428bd88e49931104117e4)] -&gt; css selector: div.styledSelect.item-quantity]
+Session ID: f0769d2b835428bd88e49931104117e4
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at com.SnapDeals.Tests.CartTest.incQuantity(CartTest.java:79)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1031376502", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1031376502'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: chrome=138.0.7204.183)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.33.0&apos;, revision: &apos;2c6aaad03a&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.4&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f0769d2b835428bd88e49931104117e4, clickElement {id=f.8E6B7558D0F9CDB346604452614012D0.d.5787E99A6F9A3906C58FB3F81733A0A9.e.217}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.183, chrome: {chromedriverVersion: 138.0.7204.183 (e90faf484dd..., userDataDir: C:\Users\NAVYAS~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57948}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57948/devtoo..., se:cdpVersion: 138.0.7204.183, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (f0769d2b835428bd88e49931104117e4)] -&gt; css selector: div.styledSelect.item-quantity]
+Session ID: f0769d2b835428bd88e49931104117e4
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at com.SnapDeals.Tests.CartTest.incQuantity(CartTest.java:79)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>com.SnapDeals.Tests.CartTest@7b02881e</td></tr>
+</table><p>
+>>>>>>> 59de8ca (Final Push)
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,6 +225,7 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<<<<<<< HEAD
 <td title='com.SnapDeals.Tests.MenSelectionTest.menSelectionCheck()'><b>menSelectionCheck</b><br>Test class: com.SnapDeals.Tests.MenSelectionTest</td>
 <td></td>
 <td>7</td>
@@ -85,10 +235,17 @@ function toggleAllBoxes() {
 <td></td>
 <td>0</td>
 <td>com.SnapDeals.Tests.MenSelectionTest@ed7f8b4</td></tr>
+=======
+<td title='com.SnapDeals.Tests.LoginTest.FieldCheck()'><b>FieldCheck</b><br>Test class: com.SnapDeals.Tests.LoginTest</td>
+<td></td>
+<td>0</td>
+<td>com.SnapDeals.Tests.LoginTest@117e949d</td></tr>
+>>>>>>> 59de8ca (Final Push)
 <tr>
 <td title='com.SnapDeals.Tests.MenSelectionTest.itemSelectionCheck()'><b>itemSelectionCheck</b><br>Test class: com.SnapDeals.Tests.MenSelectionTest</td>
 <td></td>
 <td>3</td>
+<<<<<<< HEAD
 <td>com.SnapDeals.Tests.MenSelectionTest@ed7f8b4</td></tr>
 <tr>
 <td title='com.SnapDeals.Tests.LoginTest.LoginCheck()'><b>LoginCheck</b><br>Test class: com.SnapDeals.Tests.LoginTest<br>Parameters: 9440988370</td>
@@ -110,10 +267,29 @@ function toggleAllBoxes() {
 <td></td>
 <td>1</td>
 <td>com.SnapDeals.Tests.MenSelectionTest@ed7f8b4</td></tr>
+=======
+<td>com.SnapDeals.Tests.MenSelectionTest@6db9f5a4</td></tr>
+<tr>
+<td title='com.SnapDeals.Tests.MenSelectionTest.zipFilterCheck()'><b>zipFilterCheck</b><br>Test class: com.SnapDeals.Tests.MenSelectionTest</td>
+<td></td>
+<td>1</td>
+<td>com.SnapDeals.Tests.MenSelectionTest@6db9f5a4</td></tr>
+<tr>
+<td title='com.SnapDeals.Tests.LoginTest.LoginCheck()'><b>LoginCheck</b><br>Test class: com.SnapDeals.Tests.LoginTest<br>Parameters: 9573502418</td>
+<td></td>
+<td>37</td>
+<td>com.SnapDeals.Tests.LoginTest@117e949d</td></tr>
+<tr>
+<td title='com.SnapDeals.Tests.LoginTest.loginPageCheck()'><b>loginPageCheck</b><br>Test class: com.SnapDeals.Tests.LoginTest</td>
+<td></td>
+<td>0</td>
+<td>com.SnapDeals.Tests.LoginTest@117e949d</td></tr>
+>>>>>>> 59de8ca (Final Push)
 <tr>
 <td title='com.SnapDeals.Tests.MenSelectionTest.itemAddedToCartCheck()'><b>itemAddedToCartCheck</b><br>Test class: com.SnapDeals.Tests.MenSelectionTest</td>
 <td></td>
 <td>1</td>
+<<<<<<< HEAD
 <td>com.SnapDeals.Tests.MenSelectionTest@ed7f8b4</td></tr>
 <tr>
 <td title='com.SnapDeals.Tests.MenSelectionTest.loginToSnapdeal()'><b>loginToSnapdeal</b><br>Test class: com.SnapDeals.Tests.MenSelectionTest</td>
@@ -125,6 +301,84 @@ function toggleAllBoxes() {
 <td></td>
 <td>1</td>
 <td>com.SnapDeals.Tests.LoginTest@e4487af</td></tr>
+=======
+<td>com.SnapDeals.Tests.MenSelectionTest@6db9f5a4</td></tr>
+<tr>
+<td title='com.SnapDeals.Tests.SearchTest.addItemToCart()'><b>addItemToCart</b><br>Test class: com.SnapDeals.Tests.SearchTest</td>
+<td></td>
+<td>1</td>
+<td>com.SnapDeals.Tests.SearchTest@5f8edcc5</td></tr>
+<tr>
+<td title='com.SnapDeals.Tests.SearchTest.searchText()'><b>searchText</b><br>Test class: com.SnapDeals.Tests.SearchTest</td>
+<td></td>
+<td>0</td>
+<td>com.SnapDeals.Tests.SearchTest@5f8edcc5</td></tr>
+<tr>
+<td title='com.SnapDeals.Tests.CartTest.openCart()'><b>openCart</b><br>Test class: com.SnapDeals.Tests.CartTest</td>
+<td></td>
+<td>4</td>
+<td>com.SnapDeals.Tests.CartTest@7b02881e</td></tr>
+<tr>
+<td title='com.SnapDeals.Tests.MenSelectionTest.menSelectionCheck()'><b>menSelectionCheck</b><br>Test class: com.SnapDeals.Tests.MenSelectionTest</td>
+<td></td>
+<td>7</td>
+<td>com.SnapDeals.Tests.MenSelectionTest@6db9f5a4</td></tr>
+<tr>
+<td title='com.SnapDeals.Tests.CartTest.loginToSnapdeal()'><b>loginToSnapdeal</b><br>Test class: com.SnapDeals.Tests.CartTest</td>
+<td></td>
+<td>40</td>
+<td>com.SnapDeals.Tests.CartTest@7b02881e</td></tr>
+<tr>
+<td title='com.SnapDeals.Tests.SearchTest.search()'><b>search</b><br>Test class: com.SnapDeals.Tests.SearchTest</td>
+<td></td>
+<td>2</td>
+<td>com.SnapDeals.Tests.SearchTest@5f8edcc5</td></tr>
+<tr>
+<td title='com.SnapDeals.Tests.CartTest.editPincode()'><b>editPincode</b><br>Test class: com.SnapDeals.Tests.CartTest</td>
+<td></td>
+<td>0</td>
+<td>com.SnapDeals.Tests.CartTest@7b02881e</td></tr>
+<tr>
+<td title='com.SnapDeals.Tests.CartTest.proceed()'><b>proceed</b><br>Test class: com.SnapDeals.Tests.CartTest</td>
+<td></td>
+<td>0</td>
+<td>com.SnapDeals.Tests.CartTest@7b02881e</td></tr>
+<tr>
+<td title='com.SnapDeals.Tests.LoginTest.websiteCheck()'><b>websiteCheck</b><br>Test class: com.SnapDeals.Tests.LoginTest</td>
+<td></td>
+<td>0</td>
+<td>com.SnapDeals.Tests.LoginTest@117e949d</td></tr>
+<tr>
+<td title='com.SnapDeals.Tests.SearchTest.searchButton()'><b>searchButton</b><br>Test class: com.SnapDeals.Tests.SearchTest</td>
+<td></td>
+<td>0</td>
+<td>com.SnapDeals.Tests.SearchTest@5f8edcc5</td></tr>
+<tr>
+<td title='com.SnapDeals.Tests.SearchTest.chooseItem()'><b>chooseItem</b><br>Test class: com.SnapDeals.Tests.SearchTest</td>
+<td></td>
+<td>3</td>
+<td>com.SnapDeals.Tests.SearchTest@5f8edcc5</td></tr>
+<tr>
+<td title='com.SnapDeals.Tests.MenSelectionTest.loginToSnapdeal()'><b>loginToSnapdeal</b><br>Test class: com.SnapDeals.Tests.MenSelectionTest</td>
+<td></td>
+<td>40</td>
+<td>com.SnapDeals.Tests.MenSelectionTest@6db9f5a4</td></tr>
+<tr>
+<td title='com.SnapDeals.Tests.MenSelectionTest.selectDiscountCheck()'><b>selectDiscountCheck</b><br>Test class: com.SnapDeals.Tests.MenSelectionTest</td>
+<td></td>
+<td>0</td>
+<td>com.SnapDeals.Tests.MenSelectionTest@6db9f5a4</td></tr>
+<tr>
+<td title='com.SnapDeals.Tests.CartTest.cartIcon()'><b>cartIcon</b><br>Test class: com.SnapDeals.Tests.CartTest</td>
+<td></td>
+<td>0</td>
+<td>com.SnapDeals.Tests.CartTest@7b02881e</td></tr>
+<tr>
+<td title='com.SnapDeals.Tests.SearchTest.sortBy()'><b>sortBy</b><br>Test class: com.SnapDeals.Tests.SearchTest</td>
+<td></td>
+<td>0</td>
+<td>com.SnapDeals.Tests.SearchTest@5f8edcc5</td></tr>
+>>>>>>> 59de8ca (Final Push)
 </table><p>
 </body>
 </html>

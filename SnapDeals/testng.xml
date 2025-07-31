@@ -4,8 +4,16 @@
   <test thread-count="5" name="Test">
   <parameter name="browser" value="chrome"/>
     <classes>
+<<<<<<< HEAD
       <class name="com.SnapDeals.Tests.LoginTest" />
       <class name="com.SnapDeals.Tests.MenSelectionTest" />
+=======
+      <class name="com.SnapDeals.Tests.RegisterTest" />
+      <class name="com.SnapDeals.Tests.LoginTest" />
+      <class name="com.SnapDeals.Tests.MenSelectionTest" />
+      <class name="com.SnapDeals.Tests.SearchTest" />
+      <class name="com.SnapDeals.Tests.CartTest" />
+>>>>>>> 59de8ca (Final Push)
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

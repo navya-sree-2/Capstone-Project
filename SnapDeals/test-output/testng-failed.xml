@@ -4,16 +4,39 @@
   <test thread-count="5" name="Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
+<<<<<<< HEAD
       <class name="com.SnapDeals.Tests.LoginTest">
         <methods>
           <include name="setupPage"/>
+=======
+      <class name="com.SnapDeals.Tests.RegisterTest">
+        <methods>
+>>>>>>> 59de8ca (Final Push)
           <include name="launchBrowser"/>
           <include name="tearDownSuite"/>
           <include name="setupSuite"/>
           <include name="tearDown"/>
+<<<<<<< HEAD
           <include name="LoginCheck"/>
         </methods>
       </class> <!-- com.SnapDeals.Tests.LoginTest -->
+=======
+          <include name="tearDown"/>
+          <include name="Register"/>
+        </methods>
+      </class> <!-- com.SnapDeals.Tests.RegisterTest -->
+      <class name="com.SnapDeals.Tests.CartTest">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="incQuantity"/>
+          <include name="tearDownSuite"/>
+          <include name="setupSuite"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="setupPage"/>
+        </methods>
+      </class> <!-- com.SnapDeals.Tests.CartTest -->
+>>>>>>> 59de8ca (Final Push)
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

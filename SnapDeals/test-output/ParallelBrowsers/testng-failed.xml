@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<<<<<<< HEAD
 <suite thread-count="2" parallel="methods" name="Failed suite [ParallelBrowsers]" guice-stage="DEVELOPMENT">
   <test thread-count="2" parallel="methods" name="EdgeTest(failed)">
     <parameter name="browser" value="edge"/>
@@ -15,4 +16,26 @@
       </class> <!-- com.SnapDeals.Tests.MenSelectionTest -->
     </classes>
   </test> <!-- EdgeTest(failed) -->
+=======
+<suite parallel="tests" name="Failed suite [ParallelBrowsers]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="tests" name="FirefoxTest(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.SnapDeals.Tests.SearchTest">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="addItemToCart"/>
+          <include name="tearDownSuite"/>
+          <include name="sortBy"/>
+          <include name="setupSuite"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="chooseItem"/>
+          <include name="search"/>
+          <include name="setupPage"/>
+        </methods>
+      </class> <!-- com.SnapDeals.Tests.SearchTest -->
+    </classes>
+  </test> <!-- FirefoxTest(failed) -->
+>>>>>>> 59de8ca (Final Push)
 </suite> <!-- Failed suite [ParallelBrowsers] -->

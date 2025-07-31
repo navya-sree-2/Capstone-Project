@@ -22,7 +22,11 @@ public class MenSelectionTest extends BaseTest {
 	
 	@Test(priority=1)
     public void loginToSnapdeal() throws InterruptedException {
+<<<<<<< HEAD
 //		driver.manage().deleteAllCookies();
+=======
+		
+>>>>>>> 59de8ca (Final Push)
 	  	loginPage.hoverAndClickLogin();
 	  	Thread.sleep(3000);
 	  	loginPage.enterUsername(prop.getProperty("phn"));
@@ -34,7 +38,10 @@ public class MenSelectionTest extends BaseTest {
 	  	else {
 	  		System.out.println("Unsuccessful");
 	  	}
+<<<<<<< HEAD
 //	  	ms = new MenSelection(driver);
+=======
+>>>>>>> 59de8ca (Final Push)
     }
 	
 	
@@ -47,11 +54,16 @@ public class MenSelectionTest extends BaseTest {
         	test.log(Status.FAIL, "Mens Fashion Element not displayed");
 	    }
 	    Thread.sleep(5000);
+<<<<<<< HEAD
 	    ms.hoverAndClickSunGlasses();
+=======
+	    ms.hoverAndClickLapiBags();
+>>>>>>> 59de8ca (Final Push)
 	    ms.selectPriceRange(150, 1500);
 	}
 	
 	@Test(priority = 3)
+<<<<<<< HEAD
 	public void menOnlyFilterCheck() {
 		ms.selectMenOnlyFilter();
 		if(ms.menOnly().isSelected()) {
@@ -59,10 +71,20 @@ public class MenSelectionTest extends BaseTest {
         }
         else {
         	test.log(Status.FAIL, "Men Only Filter not Selected");
+=======
+	public void zipFilterCheck() throws InterruptedException {
+		ms.selectZipFilter();
+		if(ms.zipClosure().isEnabled()) {
+			test.log(Status.PASS, "Zip closure Filter Selected");
+        }
+        else {
+        	test.log(Status.FAIL, "Zip closure Filter not Selected");
+>>>>>>> 59de8ca (Final Push)
 	    }
 	}
 	
 	@Test(priority = 4)
+<<<<<<< HEAD
 	public void metalMaterialCheck() throws InterruptedException {
 		if(ms.metalMaterial().isDisplayed()) {
 			test.log(Status.PASS, "Material Filter - Metal Displayed");
@@ -87,6 +109,25 @@ public class MenSelectionTest extends BaseTest {
         		//take ss
         	}
         }
+=======
+	public void selectDiscountCheck() throws InterruptedException {
+		ms.expandDiscountFilter();
+    	if(ms.discountEle().isDisplayed()) {
+    		test.log(Status.PASS, "Discount Filter - Expanded");
+    		ms.selectDiscount();
+    		if(ms.discountEle().isEnabled()) {
+    			test.log(Status.PASS, "Discount Selected");
+            }
+    		else {
+    			test.log(Status.FAIL, "Discount not Selected");
+    			//take ss
+    		}
+    	}
+    	else {
+    		test.log(Status.FAIL, "Discount Filter - not Expanded");
+    		//take ss
+    	}
+>>>>>>> 59de8ca (Final Push)
 	}
 	
 	@Test(priority = 5) 
@@ -111,4 +152,8 @@ public class MenSelectionTest extends BaseTest {
 		}
 	}
 	
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 59de8ca (Final Push)
