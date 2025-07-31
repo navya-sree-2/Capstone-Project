@@ -1,28 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<<<<<<< HEAD
-<suite name="ParallelBrowsers" parallel="true" thread-count="2">
-  <test name="ChromeTest">
-    <parameter name="browser" value="chrome"/>
-    <classes>
-      <class name="com.SnapDeals.Tests.MenSelectionTest"/>
-=======
 <suite name="ParallelBrowsers" parallel="tests" thread-count="5">
   <test name="ChromeTest">
     <parameter name="browser" value="chrome"/>
     <classes>
       <class name="com.SnapDeals.Tests.SearchTest"/>
->>>>>>> 59de8ca (Final Push)
     </classes>
   </test>
   <test name="FirefoxTest">
     <parameter name="browser" value="firefox"/>
     <classes>
-<<<<<<< HEAD
-      <class name="com.SnapDeals.Tests.MenSelectionTest"/>
-=======
       <class name="com.SnapDeals.Tests.SearchTest"/>
->>>>>>> 59de8ca (Final Push)
     </classes>
   </test>
 </suite>

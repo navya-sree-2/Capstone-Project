@@ -22,11 +22,6 @@ public class MenSelectionTest extends BaseTest {
 	
 	@Test(priority=1)
     public void loginToSnapdeal() throws InterruptedException {
-<<<<<<< HEAD
-//		driver.manage().deleteAllCookies();
-=======
-		
->>>>>>> 59de8ca (Final Push)
 	  	loginPage.hoverAndClickLogin();
 	  	Thread.sleep(3000);
 	  	loginPage.enterUsername(prop.getProperty("phn"));
@@ -38,10 +33,6 @@ public class MenSelectionTest extends BaseTest {
 	  	else {
 	  		System.out.println("Unsuccessful");
 	  	}
-<<<<<<< HEAD
-//	  	ms = new MenSelection(driver);
-=======
->>>>>>> 59de8ca (Final Push)
     }
 	
 	
@@ -54,24 +45,11 @@ public class MenSelectionTest extends BaseTest {
         	test.log(Status.FAIL, "Mens Fashion Element not displayed");
 	    }
 	    Thread.sleep(5000);
-<<<<<<< HEAD
-	    ms.hoverAndClickSunGlasses();
-=======
 	    ms.hoverAndClickLapiBags();
->>>>>>> 59de8ca (Final Push)
 	    ms.selectPriceRange(150, 1500);
 	}
 	
 	@Test(priority = 3)
-<<<<<<< HEAD
-	public void menOnlyFilterCheck() {
-		ms.selectMenOnlyFilter();
-		if(ms.menOnly().isSelected()) {
-			test.log(Status.PASS, "Men Only Filter Selected");
-        }
-        else {
-        	test.log(Status.FAIL, "Men Only Filter not Selected");
-=======
 	public void zipFilterCheck() throws InterruptedException {
 		ms.selectZipFilter();
 		if(ms.zipClosure().isEnabled()) {
@@ -79,37 +57,10 @@ public class MenSelectionTest extends BaseTest {
         }
         else {
         	test.log(Status.FAIL, "Zip closure Filter not Selected");
->>>>>>> 59de8ca (Final Push)
 	    }
 	}
 	
 	@Test(priority = 4)
-<<<<<<< HEAD
-	public void metalMaterialCheck() throws InterruptedException {
-		if(ms.metalMaterial().isDisplayed()) {
-			test.log(Status.PASS, "Material Filter - Metal Displayed");
-        }
-        else {
-        	test.log(Status.FAIL, "Material Filter - Metal not Displayed");
-        	// take screenshot
-        	ms.expandMaterialFilter();
-        	if(ms.metalMaterial().isDisplayed()) {
-        		test.log(Status.PASS, "Material Filter - Metal Displayed");
-        		ms.selectMaterialMetal();
-        		if(ms.metalMaterial().isEnabled()) {
-        			test.log(Status.PASS, "Material Filter - Metal Enabled");
-                }
-        		else {
-        			test.log(Status.FAIL, "Material Filter - Metal not Enabled");
-        			//take ss
-        		}
-        	}
-        	else {
-        		test.log(Status.FAIL, "Material Filter - Metal not Displayed");
-        		//take ss
-        	}
-        }
-=======
 	public void selectDiscountCheck() throws InterruptedException {
 		ms.expandDiscountFilter();
     	if(ms.discountEle().isDisplayed()) {
@@ -127,7 +78,6 @@ public class MenSelectionTest extends BaseTest {
     		test.log(Status.FAIL, "Discount Filter - not Expanded");
     		//take ss
     	}
->>>>>>> 59de8ca (Final Push)
 	}
 	
 	@Test(priority = 5) 
@@ -151,9 +101,4 @@ public class MenSelectionTest extends BaseTest {
 			test.log(Status.FAIL, "Item not Added to Cart");
 		}
 	}
-	
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 59de8ca (Final Push)

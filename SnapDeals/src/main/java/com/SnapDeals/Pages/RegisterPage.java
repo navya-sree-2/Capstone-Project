@@ -2,6 +2,7 @@ package com.SnapDeals.Pages;
 
 import java.time.Duration;
 
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.TimeoutException;
@@ -65,14 +66,10 @@ public class RegisterPage {
         contBtn.click();
     }
     
-<<<<<<< HEAD
-=======
     public WebElement emailEle() {
     	WebElement emailInp = wait.until(ExpectedConditions.elementToBeClickable(emailInput));
     	return emailInp;
     }
-    
->>>>>>> 59de8ca (Final Push)
     public void createAccount(String email, String name, String dob, String pwd) {
     	WebElement emailInp = wait.until(ExpectedConditions.elementToBeClickable(emailInput));
     	emailInp.sendKeys(email);
@@ -95,11 +92,7 @@ public class RegisterPage {
     }
 
 	public void enterOtp() throws InterruptedException {
-<<<<<<< HEAD
-		Thread.sleep(15000);
-=======
 		Thread.sleep(25000);
->>>>>>> 59de8ca (Final Push)
 		WebElement regBtn = driver.findElement(registerButton);
 		regBtn.click();
 	}

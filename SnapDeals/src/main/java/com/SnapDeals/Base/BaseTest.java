@@ -1,37 +1,27 @@
 package com.SnapDeals.Base;
 
 import java.io.IOException;
+
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-<<<<<<< HEAD
-=======
 import org.testng.ITestResult;
->>>>>>> 59de8ca (Final Push)
 import org.testng.annotations.*;
 
 import com.SnapDeals.Utilities.ConfigReader;
 import com.SnapDeals.Utilities.ExtentManager;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-<<<<<<< HEAD
-=======
 import com.aventstack.extentreports.Status;
 import com.SnapDeals.Utilities.ScreenshotUtil;
->>>>>>> 59de8ca (Final Push)
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
-	
-<<<<<<< HEAD
-	public static WebDriver driver;
-=======
 	public WebDriver driver;
->>>>>>> 59de8ca (Final Push)
     public static Properties prop;
     public static ExtentReports extent;
     public static ExtentTest test;
@@ -60,9 +50,6 @@ public class BaseTest {
         driver.manage().window().maximize();
         driver.get(prop.getProperty("url"));
     }
-<<<<<<< HEAD
-=======
-    
     
     @AfterMethod
 	public void tearDown(ITestResult result) throws IOException {
@@ -79,8 +66,6 @@ public class BaseTest {
 	    }
 	    extent.flush();
 	}
-    
->>>>>>> 59de8ca (Final Push)
 
     @AfterClass
     public void tearDown() {
